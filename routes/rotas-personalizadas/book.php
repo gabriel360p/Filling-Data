@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/books',function(){
-    return Book::all();
+    return view('books.index',['books'=>Book::all()]);
 });
 
 Route::post('/books',function(){
